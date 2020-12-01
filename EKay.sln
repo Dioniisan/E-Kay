@@ -5,7 +5,17 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EKay", "EKay\EKay.csproj", "{FC65B942-4B7B-433B-82DE-5E228681073D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestEkay", "XUnitTestEkay\XUnitTestEkay.csproj", "{40F0A784-F250-4AF3-8DF1-EDC59971363F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestEkay", "XUnitTestEkay\XUnitTestEkay.csproj", "{40F0A784-F250-4AF3-8DF1-EDC59971363F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documento.Application", "..\..\..\Users\dioni\Desktop\Ekay\Documento.Application\Documento.Application.csproj", "{96C23EE4-EBAD-4670-80B8-3EBBECA891F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekay.Api", "..\..\..\Users\dioni\Desktop\Ekay\Ekay.Api\Ekay.Api.csproj", "{0FFA5D17-F5FE-46FC-B1E7-2CC8CC02A072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekay.Application", "..\..\..\Users\dioni\Desktop\Ekay\Ekay.Application\Ekay.Application.csproj", "{1583C6A6-73F0-4DCF-810B-9EF9FA0F22A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekay.Domain", "..\..\..\Users\dioni\Desktop\Ekay\Ekay.Domain\Ekay.Domain.csproj", "{48100EAE-E32B-4811-930B-76C4ADF1D825}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekay.Infraestructure", "..\..\..\Users\dioni\Desktop\Ekay\Ekay.Infraestructure\Ekay.Infraestructure.csproj", "{596D6DF5-E88E-40E9-97B5-7245DB3BC010}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +31,26 @@ Global
 		{40F0A784-F250-4AF3-8DF1-EDC59971363F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F0A784-F250-4AF3-8DF1-EDC59971363F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F0A784-F250-4AF3-8DF1-EDC59971363F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C23EE4-EBAD-4670-80B8-3EBBECA891F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C23EE4-EBAD-4670-80B8-3EBBECA891F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C23EE4-EBAD-4670-80B8-3EBBECA891F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C23EE4-EBAD-4670-80B8-3EBBECA891F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FFA5D17-F5FE-46FC-B1E7-2CC8CC02A072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FFA5D17-F5FE-46FC-B1E7-2CC8CC02A072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFA5D17-F5FE-46FC-B1E7-2CC8CC02A072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FFA5D17-F5FE-46FC-B1E7-2CC8CC02A072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1583C6A6-73F0-4DCF-810B-9EF9FA0F22A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1583C6A6-73F0-4DCF-810B-9EF9FA0F22A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1583C6A6-73F0-4DCF-810B-9EF9FA0F22A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1583C6A6-73F0-4DCF-810B-9EF9FA0F22A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48100EAE-E32B-4811-930B-76C4ADF1D825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48100EAE-E32B-4811-930B-76C4ADF1D825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48100EAE-E32B-4811-930B-76C4ADF1D825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48100EAE-E32B-4811-930B-76C4ADF1D825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596D6DF5-E88E-40E9-97B5-7245DB3BC010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596D6DF5-E88E-40E9-97B5-7245DB3BC010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596D6DF5-E88E-40E9-97B5-7245DB3BC010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596D6DF5-E88E-40E9-97B5-7245DB3BC010}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

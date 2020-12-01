@@ -1,9 +1,4 @@
-﻿@page
-@model EKay.Pages.Crear_CuentaModel
-@{
-    ViewData["Title"] = "Cree su cuenta";
-}
-
+﻿@page "/crear-cuenta"
 <div class="d-flex justify-content-center centrado">
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
         <div class="card" style="width: 30rem">
@@ -47,52 +42,6 @@
         </div>
     </div>
 </div>
-
-@section Scripts{
-    <script>
-
-        //const url = "https://localhost:44321/api/empresa/"
-        var formulario = document.getElementById('CrearCuenta')
-
-        formulario.addEventListener('sumbit', function (e) {
-            e.preventDefault();
-            console.log("LMAO")
-
-            
-
-            var dt = new FormData(formulario)
-            //async function postData(url = '', data = {dt}) {
-            //    const response = await fetch(url, {
-            //        method: 'POST',
-            //        mode: 'cors',
-            //        headers: {
-            //            'Content-Type': 'application/json'
-            //        },
-            //        body: JSON.stringify(data)
-            //    });
-            //    return response.json();
-            //}
-            console.log(JSON.stringify(dt))
-            console.log(dt.get('Nombre'))
-            console.log(dt.get('Direcc'))
-            console.log(dt.get('Telef'))
-            console.log(dt.get('Correo'))
-            console.log(dt.get('Pass'))
-
-            fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(dt),
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-
-
-            })
-                .then(res => res.json())
-                .catch(error => console.error('Error:', error))
-                .then(response => console.log('Exito', response));
-
-        })
-    </script>
+@code {
 
 }
