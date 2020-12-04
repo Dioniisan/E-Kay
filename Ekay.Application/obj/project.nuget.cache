@@ -2,6 +2,7 @@
   "version": 2,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "qZwuaRmJ7wy1LV6EjnDX2Zhx8B2DvSdXLHFSBuwpoO4/6nF6/ykKUTupg9VcdGzPbtgq7QIT0ZXm/FZMH8iXUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj",
@@ -10,6 +11,10 @@
 =======
   "dgSpecHash": "z2IJf4EHQM+XJwgaAxbENP9PrVvm5e7LaT3JRWsZJD6v9xloZmHYrGC5sjsXXKY2+DlPGNfoLx3sDEGapy79qA==",
   "success": true,
+=======
+  "dgSpecHash": "z2IJf4EHQM+XJwgaAxbENP9PrVvm5e7LaT3JRWsZJD6v9xloZmHYrGC5sjsXXKY2+DlPGNfoLx3sDEGapy79qA==",
+  "success": true,
+>>>>>>> 7b0bea0... FromForm demoniaco
 =======
   "dgSpecHash": "z2IJf4EHQM+XJwgaAxbENP9PrVvm5e7LaT3JRWsZJD6v9xloZmHYrGC5sjsXXKY2+DlPGNfoLx3sDEGapy79qA==",
   "success": true,
