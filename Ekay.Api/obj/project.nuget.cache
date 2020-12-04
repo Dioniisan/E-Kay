@@ -2,6 +2,7 @@
   "version": 2,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "IUsMZFMTwtYN1lmqhWActtDtFLOdDpbfhAIdlwvbgwWB9+PDNZemaidc763KNrdeNTy275vOmneA4tM71tbcbg==",
 =======
   "dgSpecHash": "UKrve2i1pLg3ORN0a2THel9jSpIoJ9Sf+QHe3bKG89sVi1+kyRUocjUFRR/J0BY3DvwCjBsX1FDesy9Mqt3xIA==",
@@ -177,6 +178,12 @@
     "C:\\Users\\ekt\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ekt\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
 =======
+=======
+  "dgSpecHash": "ZiNS2P2LmA/902yYbYre9FPMFpGRaZ4n0ogpVLk5KUC1IAd6Kaozp7JAu2VBzc7W1zR3C1F/oTdtTHbL9JKfbw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Api\\Ekay.Api.csproj",
+  "expectedPackageFiles": [
+>>>>>>> 7b0bea0... FromForm demoniaco
     "C:\\Users\\dioni\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\dioni\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\dioni\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
@@ -337,6 +344,9 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+<<<<<<< HEAD
+>>>>>>> 7b0bea0... FromForm demoniaco
+=======
 >>>>>>> 7b0bea0... FromForm demoniaco
   ],
   "logs": [

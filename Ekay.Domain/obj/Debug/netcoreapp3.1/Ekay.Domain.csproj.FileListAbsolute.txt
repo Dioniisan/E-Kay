@@ -25,4 +25,7 @@ C:\Users\dioni\Desktop\EkayAPI\Ekay.Domain\obj\Debug\netcoreapp3.1\Ekay.Domain.c
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Domain\obj\Debug\netcoreapp3.1\Ekay.Domain.dll
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Domain\obj\Debug\netcoreapp3.1\Ekay.Domain.pdb
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Domain\obj\Debug\netcoreapp3.1\Ekay.Domain.genruntimeconfig.cache
+<<<<<<< HEAD
+>>>>>>> 7b0bea0... FromForm demoniaco
+=======
 >>>>>>> 7b0bea0... FromForm demoniaco

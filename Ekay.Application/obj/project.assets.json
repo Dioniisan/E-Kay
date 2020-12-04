@@ -75,7 +75,10 @@
     "frameworks": {
       "netcoreapp3.1": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7b0bea0... FromForm demoniaco
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "System.Security.Cryptography.Pkcs": {

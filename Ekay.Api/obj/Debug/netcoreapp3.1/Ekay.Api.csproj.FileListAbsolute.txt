@@ -85,9 +85,12 @@ C:\Users\ekt\source\repos\Ekay\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.csproj.
 C:\Users\ekt\source\repos\Ekay\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ekt\source\repos\Ekay\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.MvcApplicationPartsAssemblyInfo.cache
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7b2bf63d452322e1d837b0fa5133e052de11c9aa
 =======
+=======
+>>>>>>> 7b0bea0... FromForm demoniaco
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\bin\Debug\netcoreapp3.1\Ekay.Api.exe
@@ -173,4 +176,7 @@ C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.csproj.
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.dll
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.pdb
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Api\obj\Debug\netcoreapp3.1\Ekay.Api.genruntimeconfig.cache
+<<<<<<< HEAD
+>>>>>>> 7b0bea0... FromForm demoniaco
+=======
 >>>>>>> 7b0bea0... FromForm demoniaco
