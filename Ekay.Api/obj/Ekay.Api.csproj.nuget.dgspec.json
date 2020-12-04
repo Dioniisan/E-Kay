@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Ekay.Api.csproj": {}
+    "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Api\\Ekay.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Ekay.Api.csproj": {
+    "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Api\\Ekay.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Ekay.Api.csproj",
+        "projectUniqueName": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Api\\Ekay.Api.csproj",
         "projectName": "Ekay.Api",
-        "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Ekay.Api.csproj",
-        "packagesPath": "C:\\Users\\ekt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\obj\\",
+        "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Api\\Ekay.Api.csproj",
+        "packagesPath": "C:\\Users\\dioni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ekt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\dioni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,15 +31,16 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj": {
-                "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj"
+              "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\Ekay.Application.csproj": {
+                "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\Ekay.Application.csproj"
               },
-              "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj": {
-                "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj"
+              "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj": {
+                "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj"
               },
-              "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj"
+              "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj"
               }
             }
           }
@@ -47,6 +53,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -108,22 +115,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj": {
+    "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\Ekay.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj",
+        "projectUniqueName": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\Ekay.Application.csproj",
         "projectName": "Ekay.Application",
-        "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj",
-        "packagesPath": "C:\\Users\\ekt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\obj\\",
+        "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\Ekay.Application.csproj",
+        "packagesPath": "C:\\Users\\dioni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ekt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\dioni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -134,9 +146,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj": {
-                "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj"
+              "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj": {
+                "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj"
               }
             }
           }
@@ -149,6 +162,20 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+<<<<<<< HEAD
+=======
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Security.Cryptography.Pkcs": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.2, )"
+            }
+          },
+>>>>>>> 7b0bea0... FromForm demoniaco
           "imports": [
             "net461",
             "net462",
@@ -164,22 +191,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj": {
+    "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj",
         "projectName": "Ekay.Domain",
-        "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj",
-        "packagesPath": "C:\\Users\\ekt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\obj\\",
+        "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj",
+        "packagesPath": "C:\\Users\\dioni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ekt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\dioni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -190,6 +222,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -201,6 +234,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -230,22 +264,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj": {
+    "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj",
         "projectName": "Ekay.Infraestructure",
-        "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj",
-        "packagesPath": "C:\\Users\\ekt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Infraestructure\\obj\\",
+        "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Infraestructure\\Ekay.Infraestructure.csproj",
+        "packagesPath": "C:\\Users\\dioni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ekt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\dioni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -256,9 +295,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj": {
-                "projectPath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Domain\\Ekay.Domain.csproj"
+              "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj": {
+                "projectPath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Domain\\Ekay.Domain.csproj"
               }
             }
           }
@@ -271,6 +311,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -309,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

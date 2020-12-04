@@ -1,8 +1,43 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "qZwuaRmJ7wy1LV6EjnDX2Zhx8B2DvSdXLHFSBuwpoO4/6nF6/ykKUTupg9VcdGzPbtgq7QIT0ZXm/FZMH8iXUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Application\\Ekay.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+  "dgSpecHash": "z2IJf4EHQM+XJwgaAxbENP9PrVvm5e7LaT3JRWsZJD6v9xloZmHYrGC5sjsXXKY2+DlPGNfoLx3sDEGapy79qA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dioni\\Desktop\\EkayAPI\\Ekay.Application\\Ekay.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dioni\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
+    "C:\\Users\\dioni\\.nuget\\packages\\itextsharp\\5.5.13.2\\itextsharp.5.5.13.2.nupkg.sha512",
+    "C:\\Users\\dioni\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
+    "C:\\Users\\dioni\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
+    "C:\\Users\\dioni\\.nuget\\packages\\system.security.cryptography.pkcs\\5.0.0\\system.security.cryptography.pkcs.5.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"BouncyCastle 1.8.6.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"iTextSharp 5.5.13.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+>>>>>>> 7b0bea0... FromForm demoniaco
 }
