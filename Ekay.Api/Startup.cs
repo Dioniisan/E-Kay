@@ -42,6 +42,11 @@ namespace Ekay.Api
 			//services.AddTransient<IDocumentoRepository, DocumentoRepository>();
 			services.AddTransient<IDocumentoService, DocumentoService>();
 			services.AddTransient<IEmpresaService, EmpresaService>();
+			services.AddTransient<ICuentaService, CuentaService>();
+			services.AddTransient<IRemitenteService, RemitenteService>();
+			services.AddTransient<IAutorService, AutorService>();
+			services.AddTransient<ICarpetaService, CarpetaService>();
+			services.AddTransient<IFirmanteService, FirmanteService>();
 			services.AddScoped(typeof(IRepository<>), typeof(SQLRepository<>));
 			services.AddTransient<IUnitOfWork, UnitOfWork>();
 			services.AddControllers(options =>options.Filters.Add<GlobalExceptionFilter>());
@@ -56,10 +61,11 @@ namespace Ekay.Api
 		{
 			app.UseCors(options =>
 			{
-				options.WithOrigins("https://localhost:44332");
+				options.WithOrigins("https://localhost:44348"); 
 				options.AllowAnyMethod();
 				options.AllowAnyHeader();
 			});
+
 
 			if (env.IsDevelopment())
 			{

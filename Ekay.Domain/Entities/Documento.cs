@@ -12,9 +12,9 @@ namespace Ekay.Domain.Entities
             Historial = new HashSet<Historial>();
         }
 
-       // public int DocumentoId { get; set; }
+       //public int DocumentoId { get; set; }
         //public string Titulo { get; set; }
-        //public string EnlaceUrl { get; set; }
+        //public string EnlaceUrl { get; set; 
         public DateTime? FechaCreacion { get; set; }
         public string Contenido { get; set; }
         public int RemitenteId { get; set; }
@@ -25,9 +25,13 @@ namespace Ekay.Domain.Entities
 		public string Extension { get; set; }
 		public double Tamanio { get; set; }
 		public string Ruta { get; set; }
+        public string RutaBase { get; set; }
+        public string Certificado { get; set; }
 
 
-		public virtual Autor Autor { get; set; }
+
+
+        public virtual Autor Autor { get; set; }
         public virtual Carpeta Carpeta { get; set; }
         public virtual Remitente Remitente { get; set; }
         public virtual TipoDocumento TipoDoc { get; set; }

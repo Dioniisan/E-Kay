@@ -52,8 +52,11 @@ namespace Ekay.Infraestructure.Repositories
 
 		public void Dispose()
 		{
+			
+			
 			if (_context == null)
 				_context.Dispose();
+		
 		}
 
 		public void SaveChanges()

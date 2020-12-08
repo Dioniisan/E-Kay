@@ -6,12 +6,9 @@ C:\Users\ekt\source\repos\Ekay\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Dom
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csprojAssemblyReference.cache
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.AssemblyInfoInputs.cache
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.AssemblyInfo.cs
-C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CoreCompileInputs.cache
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CopyComplete
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.dll
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.pdb
-<<<<<<< HEAD
-=======
 C:\Users\ekt\source\repos\Ekay\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CoreCompileInputs.cache
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Application.deps.json
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Application.dll
@@ -25,10 +22,3 @@ C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.App
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CopyComplete
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.dll
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.pdb
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7b0bea0... FromForm demoniaco
-=======
->>>>>>> 7b0bea0... FromForm demoniaco
-=======
->>>>>>> 7b0bea0... FromForm demoniaco
