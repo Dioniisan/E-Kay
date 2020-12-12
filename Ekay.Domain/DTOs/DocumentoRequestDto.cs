@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,8 +8,7 @@ namespace Ekay.Domain.DTOs
 	public class DocumentoRequestDto
 	{
        
-        public int RemitenteId { get; set; }
-        //public int AutorId { get; set; }
+       
         public int TipoDocId { get; set; }
         public int CarpetaId { get; set; }
         public string Contenido { get; set; }
@@ -23,8 +23,12 @@ namespace Ekay.Domain.DTOs
         public string ApellidoA { get; set; }
         public string CorreoA { get; set; }
         public int EmpresaId { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Correo { get; set; }
+        public IFormFile ArchivoSubido { get; set; }
 
-       
+
 
 
 

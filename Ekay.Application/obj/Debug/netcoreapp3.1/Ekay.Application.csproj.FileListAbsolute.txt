@@ -22,3 +22,15 @@ C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.App
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CopyComplete
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.dll
 C:\Users\dioni\Desktop\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.pdb
+C:\Home\Curso\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Application.deps.json
+C:\Home\Curso\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Application.dll
+C:\Home\Curso\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Application.pdb
+C:\Home\Curso\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Domain.dll
+C:\Home\Curso\EkayAPI\Ekay.Application\bin\Debug\netcoreapp3.1\Ekay.Domain.pdb
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csprojAssemblyReference.cache
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.AssemblyInfoInputs.cache
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.AssemblyInfo.cs
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CoreCompileInputs.cache
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.csproj.CopyComplete
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.dll
+C:\Home\Curso\EkayAPI\Ekay.Application\obj\Debug\netcoreapp3.1\Ekay.Application.pdb

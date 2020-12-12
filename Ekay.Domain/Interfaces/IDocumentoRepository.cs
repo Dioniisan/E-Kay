@@ -7,20 +7,11 @@ using System.Threading.Tasks;
 
 namespace Ekay.Domain.Interfaces
 {
-	public interface IDocumentoService
+	public interface IDocumentoRepository : IRepository<Documento>
 	{
-
-		IEnumerable<Documento> GetDocumentos(DocumentoQueryFilter filters);
-		Task<Documento> GetDocumento(int id);
-		Task AddDocumento(Documento documento);
+		IEnumerable<Documento> GetDocumentos(DocumentoQueryFilter filter);
 		Task<bool> UpdateDocumento(Documento documento);
-		Task DeleteDocumento(int id);
-
-
+		Task<Documento> GetDocumento(int id);
 
 	}
 }
-
-
-
-

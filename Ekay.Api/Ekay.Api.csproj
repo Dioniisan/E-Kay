@@ -36,5 +36,7 @@
     <ProjectReference Include="..\Ekay.Infraestructure\Ekay.Infraestructure.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 
 </Project>

@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using Ekay.Application.Services;
+using Ekay.Domain.QueyFilters;
 
 namespace Ekay.Api.Controllers
 {
@@ -32,11 +33,11 @@ namespace Ekay.Api.Controllers
 
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get([FromQuery] DocumentoQueryFilter filter)
         {
             try
             {
-                var documentos = _service.GetDocumentos();
+                var documentos = _service.GetDocumentos(filter);
                 var DocumentosDto = _mapper.Map<IEnumerable<Documento>, IEnumerable<DocumentoResponseDto>>(documentos);
                 var response = new ApiResponse<IEnumerable<DocumentoResponseDto>>(DocumentosDto);
                 return Ok(response);
@@ -60,78 +61,55 @@ namespace Ekay.Api.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Post([FromForm] DocumentoRequestDto documentoDto  /*string Correo, string CorreoCop, string UrlFirma*/)
-
-        
-
+        public async Task<IActionResult> Post([FromForm] DocumentoRequestDto documentoDto  )
         {
 
-           /* List<Documento> documentos = new List<Documento>();
-            Documento documentoA = new Documento();
+            
+            //Documento documentoA = new Documento();
             try
             {
-                if (files.Count > 0)
-                {
-                    foreach (var file in files)
-                    {
-                        var filePath = "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Archivos\\" + file.FileName;
+                var documento = _mapper.Map<DocumentoRequestDto, Documento>(documentoDto);
+                await _service.AddDocumento(documento);
+                var documentoresponseDto = _mapper.Map<Documento, DocumentoResponseDto>(documento);
+                var response = new ApiResponse<DocumentoResponseDto>(documentoresponseDto);
+
+                var filePath = Path.Combine(Environment.CurrentDirectory, "Archivos", documentoDto.ArchivoSubido.FileName);
                         using (var stream = System.IO.File.Create(filePath))
                         {
-                            await file.CopyToAsync(stream);
+                            await documentoDto.ArchivoSubido.CopyToAsync(stream);
                         }
 
-                        double tamanio = file.Length;
+                        double tamanio = documentoDto.ArchivoSubido.Length;
                         tamanio = tamanio / 1000000;
                         tamanio = Math.Round(tamanio, 2);
-                        documentoA.Extension = Path.GetExtension(file.FileName).Substring(1);
-                        documentoA.NombreArchivo = Path.GetFileNameWithoutExtension(file.FileName.Trim());
-                        documentoA.Tamanio = tamanio;
-                        documentoA.Ruta = filePath;
+                        Path.GetExtension(documentoDto.ArchivoSubido.FileName).Substring(1);
+                        documento.NombreArchivo = Path.GetFileNameWithoutExtension( documentoDto.ArchivoSubido.FileName.Trim());
+                        documento.Tamanio = tamanio;
+                        documento.Ruta = filePath;
 
 
 
                         byte[] bytes = System.IO.File.ReadAllBytes(filePath);
                         string filed = Convert.ToBase64String(bytes);
-                        var filePath2 = "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Archivos\\" + Path.GetFileNameWithoutExtension(file.FileName.Trim()) + ".txt";
+                        var filePath2 = filePath + Path.GetFileNameWithoutExtension(documentoDto.ArchivoSubido.FileName.Trim()) + ".txt";
                         //var stream2 = System.IO.File.Create(filePath2) ;
                         System.IO.File.WriteAllText(filePath2, filed);
-                        documentoA.RutaBase = filePath2;
-                        documentos.Add(documentoA);
+                        documento.RutaBase = filePath2;
 
-                    }
-
+                 return Ok(response);
 
 
-                }
+
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
-            }*/
-
-            try
-            {
-
-
-                var documento = _mapper.Map<DocumentoRequestDto, Documento>(documentoDto);
-                //documento.Extension = documentoA.Extension;
-                //documento.NombreArchivo = documentoA.NombreArchivo;
-                //documento.Tamanio = documentoA.Tamanio;
-                //documento.Ruta = documentoA.Ruta;
-                //documento.RutaBase = documentoA.RutaBase;
-                await _service.AddDocumento(documento);
-                var documentoresponseDto = _mapper.Map<Documento, DocumentoResponseDto>(documento);
-                var response = new ApiResponse<DocumentoResponseDto>(documentoresponseDto);
-
-                return Ok(response);
-
             }
 
-            catch(Exception ex)
-			{
-                return BadRequest(ex.Message);
-            }
+          
 
+              
+          
 
 
 
@@ -147,70 +125,16 @@ namespace Ekay.Api.Controllers
 
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Put(int id, [FromForm]List<IFormFile> files)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Put(int id, DocumentoRequestDto documentoDto)
         {
-            DocumentoRequestDto documentoDto = new DocumentoRequestDto();
-            List<Documento> documentos = new List<Documento>();
-            Documento documentoA = new Documento();
-            try
-            {
-                if (files.Count > 0)
-                {
-                    foreach (var file in files)
-                    {
-                        var filePath = "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Archivos\\" + file.FileName;
-                        using (var stream = System.IO.File.Create(filePath))
-                        {
-                            await file.CopyToAsync(stream);
-                        }
-
-                        double tamanio = file.Length;
-                        tamanio = tamanio / 1000000;
-                        tamanio = Math.Round(tamanio, 2);
-                        documentoA.Extension = Path.GetExtension(file.FileName).Substring(1);
-                        documentoA.NombreArchivo = Path.GetFileNameWithoutExtension(file.FileName.Trim());
-                        documentoA.Tamanio = tamanio;
-                        documentoA.Ruta = filePath;
-
-
-
-                        byte[] bytes = System.IO.File.ReadAllBytes(filePath);
-                        string filed = Convert.ToBase64String(bytes);
-                        var filePath2 = "C:\\Users\\ekt\\source\\repos\\Ekay\\Ekay.Api\\Archivos\\" + Path.GetFileNameWithoutExtension(file.FileName.Trim()) + ".txt";
-                        //var stream2 = System.IO.File.Create(filePath2) ;
-                        System.IO.File.WriteAllText(filePath2, filed);
-                        documentoA.RutaBase = filePath2;
-                        documentos.Add(documentoA);
-
-                    }
-
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            
 
             try
 			{
                 var documento = _mapper.Map<Documento>(documentoDto);
                 documento.Id = id;
-                /*documento.FechaCreacion = fechaCreacion;
-                documento.Contenido = contenido;
-                documento.AutorId = autorId;
-                documento.CarpetaId = carpetaId;
-                documento.RemitenteId = carpetaId;
-                documento.TipoDocId = tipoDocId;
-                documento.UpdateAt = DateTime.Now;
-                documento.UpdatedBy = 2;*/
-                documento.Extension = documentoA.Extension;
-                documento.NombreArchivo = documentoA.NombreArchivo;
-                documento.Tamanio = documentoA.Tamanio;
-                documento.Ruta = documentoA.Ruta;
-                documento.RutaBase = documentoA.RutaBase;
+                
                 await _service.UpdateDocumento(documento);
 
                 var documentoresponseDto = _mapper.Map<Documento, DocumentoResponseDto>(documento);
