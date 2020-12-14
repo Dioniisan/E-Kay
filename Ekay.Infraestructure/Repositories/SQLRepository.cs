@@ -30,9 +30,13 @@ namespace Ekay.Infraestructure.Repositories
 			await _context.SaveChangesAsync();
 		}
 
-		public Task Delete(int id)
+		public async Task Delete(int id)
 		{
-			throw new NotImplementedException();
+			if (id <= 0)
+				throw new ArgumentNullException("Entity");
+			var entity = await GetById(id);
+			_entities.Remove(entity);
+			await _context.SaveChangesAsync();
 		}
 
 		//Buscar por medio de las condiciones que se establecieron en las reglas de negocio

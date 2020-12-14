@@ -69,34 +69,36 @@ namespace Ekay.Api.Controllers
             try
             {
                 var documento = _mapper.Map<DocumentoRequestDto, Documento>(documentoDto);
+
+                var filePath = Path.Combine(Environment.CurrentDirectory, "Archivos", documentoDto.ArchivoSubido.FileName);
+                using (var stream = System.IO.File.Create(filePath))
+                {
+                    await documentoDto.ArchivoSubido.CopyToAsync(stream);
+                }
+
+                double tamanio = documentoDto.ArchivoSubido.Length;
+                tamanio = tamanio / 1000000;
+                tamanio = Math.Round(tamanio, 2);
+                documento.Extension = Path.GetExtension(documentoDto.ArchivoSubido.FileName).Substring(1);
+                documento.NombreArchivo = Path.GetFileNameWithoutExtension(documentoDto.ArchivoSubido.FileName.Trim());
+                documento.Tamanio = tamanio;
+                documento.Ruta = filePath;
+
+
+
+                byte[] bytes = System.IO.File.ReadAllBytes(filePath);
+                string filed = Convert.ToBase64String(bytes);
+                var filePath2 = filePath + Path.GetFileNameWithoutExtension(documentoDto.ArchivoSubido.FileName.Trim()) + ".txt";
+                //var stream2 = System.IO.File.Create(filePath2) ;
+                System.IO.File.WriteAllText(filePath2, filed);
+                documento.RutaBase = filePath2;
+
                 await _service.AddDocumento(documento);
                 var documentoresponseDto = _mapper.Map<Documento, DocumentoResponseDto>(documento);
                 var response = new ApiResponse<DocumentoResponseDto>(documentoresponseDto);
 
-                var filePath = Path.Combine(Environment.CurrentDirectory, "Archivos", documentoDto.ArchivoSubido.FileName);
-                        using (var stream = System.IO.File.Create(filePath))
-                        {
-                            await documentoDto.ArchivoSubido.CopyToAsync(stream);
-                        }
 
-                        double tamanio = documentoDto.ArchivoSubido.Length;
-                        tamanio = tamanio / 1000000;
-                        tamanio = Math.Round(tamanio, 2);
-                        Path.GetExtension(documentoDto.ArchivoSubido.FileName).Substring(1);
-                        documento.NombreArchivo = Path.GetFileNameWithoutExtension( documentoDto.ArchivoSubido.FileName.Trim());
-                        documento.Tamanio = tamanio;
-                        documento.Ruta = filePath;
-
-
-
-                        byte[] bytes = System.IO.File.ReadAllBytes(filePath);
-                        string filed = Convert.ToBase64String(bytes);
-                        var filePath2 = filePath + Path.GetFileNameWithoutExtension(documentoDto.ArchivoSubido.FileName.Trim()) + ".txt";
-                        //var stream2 = System.IO.File.Create(filePath2) ;
-                        System.IO.File.WriteAllText(filePath2, filed);
-                        documento.RutaBase = filePath2;
-
-                 return Ok(response);
+                return Ok(response);
 
 
 

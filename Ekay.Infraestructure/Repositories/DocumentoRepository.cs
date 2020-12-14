@@ -63,7 +63,13 @@ namespace Ekay.Infraestructure.Repositories
 		public async Task<bool> UpdateDocumento(Documento documento)
 		{
 			var current = await GetDocumento(documento.Id);
+			current.NombreArchivo = documento.NombreArchivo;
+			current.FechaCreacion = documento.FechaCreacion;
 			current.Contenido = documento.Contenido;
+			//current.AutorId = documento.AutorId;
+			//current.Autor = documento.Autor;
+			//current.Remitente = documento.Remitente;
+			//current.RemitenteId = documento.RemitenteId;
 			var rowsUpdate = await _context.SaveChangesAsync();
 			return rowsUpdate > 0;
 		}
