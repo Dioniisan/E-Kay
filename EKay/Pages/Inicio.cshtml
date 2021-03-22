@@ -30,15 +30,14 @@
     <br />
     <div class="d-flex justify-content-center">
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <form enctype="multipart/form-data">
                 <div class="card" style="width: 90rem; height: 25rem">
                     <div class="card-header d-flex justify-content-center">
                         <div style="width: 5rem">Paso 1.-</div>
-                        <select class="form-control" style="width: 55rem" @*asp-for="@Model.DocumentoRequest.TipoDocId" asp-items="Html.GetEnumSelectList<Ekay.Clases.TipoDoc>()"*@>
+                        <select id="selecc" class="form-control" style="width: 55rem" onchange="docId()" value="" required>
                             <option hidden>Seleccione el tipo de documento.</option>
-                            <option>Compraventa</option>
-                            <option>Cese y desista</option>
-                            <option>Carta Poder</option>
+                            <option id="uno" value="2">Compraventa</option>
+                            <option id="dos" value="3">Cese y desista</option>
+                            <option id="tres" value="4">Carta Poder</option>
                         </select>
                     </div>
                     <div class="card-body">
@@ -49,15 +48,11 @@
                             </div>
                             <div style="width: 40rem"></div>
                             <br />
-                            <button asp-page="/Documento" class="btnf" style="width: 20rem; height: 5rem">Subir un documento (PDF)</button>
+                            <button onclick="smartRed()" class="btnf" style="width: 20rem; height: 5rem">Subir un documento (PDF)</button>
                             <button @*type="submit"*@ class="btne" style="width: 20rem; height: 5rem">Crear un documento</button>
                         </center>
                     </div>
                 </div>
-
-
-
-            </form>
 
 
             <table class="sortable table">
@@ -73,13 +68,14 @@
                             Nombre Archivo
                         </th>
                         <th>
-                            Autor
+                            Observaciones
                         </th>
                         <th>
-                            Remitente
-
+                            Firmante
                         </th>
-
+                        <th>
+                            Autor
+                        </th>
 
                     </tr>
                 </thead>
@@ -103,8 +99,9 @@
 
 
     <script>
+        var $formulario = document.querySelector("#Asignar")
         var contenido = document.querySelector('#Consultas')
-        const url1 = "https://e-kay.somee.com/api/documento/";
+        const url1 = "http://ekayapi-001-site1.itempurl.com/api/documento";
         const url2 = "https://localhost:44321/api/documento/"
         const url3 = "https://localhost:44321/api/firmante/"
 
@@ -118,7 +115,7 @@
 
                 })
         }
-
+        
         function tabla(data) {
             contenido.innerHTML = ''
             for (let valor of data.data) {
@@ -127,8 +124,9 @@
                     <th scope="row">${valor.id} </th>
                      <td>${valor.fechaCreacion} </td>
                      <td>${valor.nombreArchivo} </td>
+                     <td>${valor.contenido} </td>
+                     <td>${valor.nombreF} </td>
                      <td>${valor.nombreA} </td>
-                     <td>${valor.nombre} </td>
                      <td>
                       <button class="btnh" style="width:4rem;" onclick="location.href='/EditarDoc?id=${valor.id}'">Editar</button>
                      </td>
@@ -136,6 +134,28 @@
 
                         `
             }
+        }
+
+        function docId() {
+            var selValue = document.getElementById("selecc").value;
+            var selObj = document.getElementById("selecc");
+            var selValue = selObj.options[selObj.selectedIndex].value;
+            document.getElementById("selecc").value = selValue;
+            console.log(selValue);
+        }
+
+        function smartRed() {
+            var selValue = document.getElementById("selecc").value;
+            
+            console.log(selValue);
+            
+            if (selValue != null) {
+                location.href = '/Documento?id=' + selValue;
+            }
+            else {
+                location.reload;
+            }
+            
         }
     </script>
     <script>

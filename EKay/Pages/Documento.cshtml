@@ -44,6 +44,9 @@
                         <span class="text-danger" asp-validation-for="@Model.DocumentoRequest.FechaCreacion"></span>
                         <input name="FechaCreacion" type="date" class="form-control" role="textbox" asp-for="@Model.DocumentoRequest.FechaCreacion" placeholder="Fecha de Creación" required>
                         <br />
+                        <h6>Observaciones</h6>
+                        <input name="Contenido" type="text" class="form-control" role="textbox" placeholder="Anote sus observaciones" required>
+                        <br />
                         <h6>Autor</h6>
                         <span class="text-danger" asp-validation-for="@Model.AutorRequest.NombreA"></span>
                         <input name="NombreA" type="text" class="form-control" role="textbox" asp-for="@Model.AutorRequest.NombreA" placeholder="Nombre" required>
@@ -65,9 +68,9 @@
                         <input name="Correo" type="text" class="form-control" role="textbox" asp-for="@Model.RemitenteRequest.CorreoR" placeholder="Correo" required>
                         <br />
                         @*<p>
-                            Sube archivos:
-                            <input type="file" name="ArchivoSubido" multiple" accept="application/pdf" />
-                        </p>*@
+            Sube archivos:
+            <input type="file" name="ArchivoSubido" multiple" accept="application/pdf" />
+        </p>*@
                         @*<button type="submit" class="btnp" onclick="DocumentoRegistrar()">Registrar</button>*@
                     </div>
 
@@ -91,15 +94,15 @@
                         <br />
                         <input name="Organizacion" type="text" class="form-control" role="textbox" placeholder="Nombre de la organización" required>
                         <br />
-                        <h4>Opciones del Documento</h4>
+                        @*<h4>Opciones del Documento</h4>
                         <br />
                         <input type="radio" id="clave" />
                         <label for="clave">Clave de acceso</label>
                         <br />
+                        <br />*@
+                        @*<input type="text" class="form-control" role="textbox" placeholder="Cree una clave de acceso">
                         <br />
-                        <input type="text" class="form-control" role="textbox" placeholder="Cree una clave de acceso">
-                        <br />
-                        <br />
+                        <br />*@
                         <center>
                             <button type="submit" class="btnp" onclick="DocumentoEnviar()">Enviar</button>
                         </center>
@@ -116,38 +119,25 @@
 @section Scripts{
     <script>
         function DocumentoEnviar() {
-            const url1 = "https://e-kay.somee.com/api/documento/";
+            const url1 = "http://ekayapi-001-site1.itempurl.com/api/documento";
             const url2 = "https://localhost:44321/api/documento/"
             const url3 = "https://localhost:44321/api/firmante/"
             const $formulario = document.querySelector('#Documento')
+            let urlparam = new URLSearchParams(window.location.search);
+            let docId = urlparam.get("id");
             
-            //borre el createobject
-
-            //const $label = document.querySelector('#mensaje')
-            //function displayMessage(message) {
-            //    if (message)
-            //        $label.textContent = "Ohhh por dios funciono!!!"
-            //    else
-            //        $label.textContent = "Oh ohhh hay problemas en la matrix!!!"
-            //}
+          
 
             $formulario.addEventListener('submit', (e) => {
                 e.preventDefault();
 
-                //crear el formulario de documento                  si no estoy mal, un solo formulario tambien serviria(?).
                 const dt = new FormData($formulario);
-                //dt.set('contenido', '');
-                //dt.set('nombreArchivo', '');
-                //dt.set('ruta', '');
-                //dt.set('tamanio', 0);
-                //dt.set('extension', '');
-                //dt.set('rutaBase', '');
-                //dt.set('certificado', '');
-                //dt.set('empresaId', 1);
-                dt.set('RemitenteId', 1);
-                dt.set('tipoDocId', 1);
+                
+                
+                dt.set('tipoDocId', docId);
                 dt.set('carpetaId', 5);
-                dt.set('FirmanteId', 1);
+                
+                
 
                 console.log(JSON.stringify())
 
@@ -158,61 +148,16 @@
                     body: dt,
                 }).then(function (result) {
                     if (result.ok) {
-                        alert("Documento registrado con exito.");
+                        alert("Documento y Firmante registrados con exito. El firmante ha recibido el vinculo para firmar este documento. Se le redirigirá a la pagina de inicio.");
+                        location.href = '/Inicio';
                     }
                     else {
                         alert("Ha habido un error en el registro del documento, error: " + result.status);
                     }
                 })
 
-
-                //crear el formulario de firmante
-                const data = new FormData($formulario);
-                data.set('documentoId', 5);
-                console.log(JSON.stringify(data));
-
-                //post a firmante
-                fetch(url3, {
-                    method: 'POST',
-                    body: data,
-                }).then(function (result) {
-                    if (result.ok) {
-                        alert("Firmante registrado con exito. El firmante ha recibido un correo electronico con el enlace para firmar este documento. Usted será redirigido a la pagina de inicio.");
-                        //Devolver a la pagina de inicio cuando se envie el doc.
-                        location.href = '/Inicio';
-                    }
-                    else {
-                        alert("Ha habido un error en el registro del firmante, error: " + result.status);
-                    }
-                })
-
-                
-                    
-
             })
         }
-
-        //He movido la funcion y los post para hacerlo en uno solo. Pulsar el boton de enviar hará los post en su debido orden.
-
-        //function DocumentoEnviar() {
-        //    const url1 = "https://e-kay.somee.com/api/documento/";
-        //    const url2 = "https://localhost:44321/api/documento/"
-        //    const url3 = "https://localhost:44321/api/firmante/"
-        //    const $form = document.querySelector('#Documento')
-
-        //    const $label2 = document.querySelector('#mensaje')
-        //    function displayMessage(message) {
-        //        if (message)
-        //            $label.textContent = "Ohhh por dios funciono!!!"
-        //        else
-        //            $label.textContent = "Oh ohhh hay problemas en la matrix!!!"
-        //    }
-
-        //    $form.addEventListener('submit', (e) => {
-        //        e.preventDefault();
-
-        //    })
-        //}
         
     </script>
 

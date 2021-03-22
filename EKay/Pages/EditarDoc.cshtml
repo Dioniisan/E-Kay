@@ -3,52 +3,40 @@
 @{
     ViewData["Title"] = "Editar datos del documento";
 }
-
-<form id="YAMECANSE" method="post" enctype="application/json">
-    <div id="view"  class="d-flex justify-content-around">
-        <div style="padding-top: 5rem;">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <input id="iden" name="id" type="text" class="form-control" role="textbox" placeholder="id" disabled>
-                    <h5>Fecha de Creacion:</h5>
-                    <input id="fecha" name="FechaCreacion" type="date" class="form-control" role="textbox" placeholder="Fecha de Creación">
-                    <h5>Contenido:</h5>
-                    <input id="contenido" name="Contenido" type="text" class="form-control" role="textbox" placeholder="Contenido">
-                    <h5>Nombre del Archivo:</h5>
-                    <input id="name" name="nombreArchivo" type="text" class="form-control" role="textbox" placeholder="Nombre archivo">
-
-                    @*
-                    <input id="ext" name="extension" type="text" class="form-control" role="textbox" placeholder="extension">
-
-                    <input id="tamanio" name="tamanio" type="text" class="form-control" role="textbox" placeholder="tamanño">
-
-                    <input id="ruta" name="ruta" type="text" class="form-control" role="textbox" placeholder="ruta">
-
-                    <input id="rutabase" name="rutaBase" type="text" class="form-control" role="textbox" placeholder="ruta base">
-
-                    <input id="cert" name="certificado" type="text" class="form-control" role="textbox" placeholder="certificado">
-                    *@
-                    <h5>Nombre del Autor:</h5>
-                    <input id="NombreA" name="nombreA" type="text" class="form-control" role="textbox" placeholder="Nombre Autor">
-                    <h5>Nombre del Remitente:</h5>
-                    <input id="Nombre" name="nombre" type="text" class="form-control" role="textbox" placeholder="Nombre Remitente">
-
-                    @*
-                    <input id="correo" name="correoA" type="text" class="form-control" role="textbox" placeholder="Correo Autor">
-                    *@
-                </li>
-            </ul>
-            <div style="padding-left: 3rem;">
-                <button type="submit">Editar</button>
-                <button onclick="Borrar()">Borrar</button>
+<link rel="stylesheet" href="~/css/botones.css" />
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb d-flex justify-content-end">
+        <li class="breadcrumb-item" style="padding-right: 2rem; padding-top: .5rem">
+            <a href="../Inicio">Cancelar</a>
+        </li>
+    </ol>
+</nav>
+<div class="d-flex justify-content-center centrado">
+    <form id="YAMECANSE" method="post" enctype="application/json">
+        <div id="view" class="d-flex justify-content-around">
+            <div style="padding-top: 5rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <input id="iden" name="id" type="text" class="form-control" role="textbox" placeholder="id" disabled>
+                        <h5>Fecha de Creacion:</h5>
+                        <input id="fecha" name="FechaCreacion" type="date" class="form-control" role="textbox" placeholder="Fecha de Creación">
+                        <h5>Observaciones:</h5>
+                        <input id="contenido" name="Contenido" type="text" class="form-control" role="textbox" placeholder="Contenido">
+                        <h5>Nombre del Archivo:</h5>
+                        <input id="name" name="nombreArchivo" type="text" class="form-control" role="textbox" placeholder="Nombre archivo">
+                    </li>
+                </ul>
+                <div style="padding-top: 2rem; padding-left: 2rem;">
+                    <button class="btnh" onclick="Borrar()">Borrar</button>
+                </div>
             </div>
-        </div>
-        
-            <img src="~/Images/Document.jpg"/>
-        
 
+            <img src="~/Images/Document.jpg" />
+
+
+        </div>
+    </form>
 </div>
-</form>
 
 <div>
     <label id="mensaje" name="mensaje" css="color:red;"></label>
@@ -57,7 +45,7 @@
 
 <script>
 
-    const url1 = "https://e-kay.somee.com/api/documento/";
+    const url1 = "http://ekayapi-001-site1.itempurl.com/api/documento";
     const url2 = "https://localhost:44321/api/documento/";
     const formulario = document.querySelector('#YAMECANSE');
     const iden = document.getElementById("iden");

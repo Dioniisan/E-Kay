@@ -30,28 +30,24 @@
                     <br />
                     <br />
                     <h5>Cargue su certificado (.cer):</h5>
-                    <div class="file-upload-ekay">
-                        <input type="file" id="input-file-now" class="file-upload" accept=".cer"/>
+                    <div>
+                        <input type="file" name="Cer" accept=".cer" multiple/>
                     </div>
                     <br />
                     <br />
                     <h5>Cargue su Llave privada (.key):</h5>
                     <div class="file-upload-ekay">
-                        <input type="file" id="input-file-now" class="file-upload" accept=".key" />
+                        <input type="file" name="Key" accept=".key" multiple/>
                     </div>
                     <br />
                     <br />
-                    <h5>Ingrese la contraseña de la e.firma</h5>
-                    <input type="password" class="form-control" role="textbox" placeholder="Contraseña" />
-                    <br />
-                    <br />
-                    @*<h5>Prueba</h5>
-                    <input id="name" name="nombreArchivo" type="text" class="form-control" role="textbox" placeholder="Prueba" />
+                    <h5>Nombre</h5>
+                    <input id="name" name="NombreArchivo" type="text" class="form-control" role="textbox" placeholder="Prueba" />
                     <br />
                     <br />
                     <input id="iden" name="id" type="text" class="form-control" role="textbox" placeholder="id" disabled hidden>
                     <br />
-                    <br />*@
+                    <br />
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btne">
                             Firmar y enviar
@@ -67,7 +63,7 @@
 @section Scripts{
 <script>
 
-    const url1 = "https://e-kay.somee.com/api/documento/";
+    const url1 = "http://ekayapi-001-site1.itempurl.com/api/documento";
     const url2 = "https://localhost:44321/api/documento/"
     const url3 = "https://localhost:44321/api/firmante/"
     window.addEventListener("load", GetDoc);
@@ -133,28 +129,37 @@
             e.preventDefault()
             let urlparam = new URLSearchParams(window.location.search);
             let id = urlparam.get("id");
-            var dt = $("form").serializeArray();
-            var data = {};
-            var s = '';
-            for (s in dt) {
-                data[dt[s]['name']] = dt[s]['value'];
-            }
-
+            //var dt = $("form").serializeArray();
+            //var data = {};
+            //var s = '';
+            //for (s in dt) {
+            //    data[dt[s]['name']] = dt[s]['value'];
+            //}
+            const $form = document.querySelector('#Formulario')
+            const data = new FormData($form);
             fetch(url2 + id, {
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                //headers: {
+                //    'Content-Type': 'application/json'
+                //},
                 cache: 'default',
                 method: 'PUT',
                 mode: 'cors',
-                body: JSON.stringify(data)
+                body: data
 
             })
-                .then(res => res.json())
+                //.then(res => res.json())
                 .catch(error => alert('Error: ' + error))
-                .then(response => displayMessage(response));
-            console.log(JSON.stringify(data.id))
-        })
+                .then(response => displayMessage(response))
+                .then(function (result) {
+                    if (result.ok) {
+                        alert("Documento firmado con exito.");
+                        location.href = '/Index';
+                    }
+                    else {
+                        alert("Ha habido un error en la firma del documento, error: " + result.status);
+                    }
+                })
+            })
         //function DocLoad() {
         //    let urlparam = new URLSearchParams(window.location.search);
         //    let id = urlparam.get("id");

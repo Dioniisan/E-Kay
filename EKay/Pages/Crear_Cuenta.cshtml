@@ -17,33 +17,33 @@
                     <center>
                         <h2 class="card-title">Crear su cuenta</h2>
                     </center>
-                    <form method="post" class="d-flex justify-content-center" enctype="multipart/form-data">
+                    <form id="Cuenta" name="Cuenta" method="post" class="d-flex justify-content-center" enctype="multipart/form-data">
                         <div class="d-flex justify-content-center" style="width: 30rem;">
                             <ul class="list-group list-group-flush" style="width: 20rem;">
                                 <li class="list-group-item">
                                     <span class="text-danger" asp-validation-for="EmpresaRequest.Nombre"></span>
                                     <div class="form-group">
-                                        <input asp-for="EmpresaRequest.Nombre" type="text" class="form-control" role="textbox" placeholder="Nombre de su empresa" required>
+                                        <input name="Nombre" asp-for="EmpresaRequest.Nombre" type="text" class="form-control" role="textbox" placeholder="Nombre de su empresa" required>
                                     </div>
                                     <span class="text-danger" asp-validation-for="EmpresaRequest.NombreRepresentante"></span>
                                     <div class="form-group">
-                                        <input asp-for="EmpresaRequest.NombreRepresentante" type="text" class="form-control" role="textbox" placeholder="Nombre de su representante" required>
+                                        <input name="NombreRepresentante" asp-for="EmpresaRequest.NombreRepresentante" type="text" class="form-control" role="textbox" placeholder="Nombre de su representante" required>
                                     </div>
                                     <span class="text-danger" asp-validation-for="EmpresaRequest.Direccion"></span>
                                     <div class="form-group d-flex justify-content-center">
-                                        <input asp-for="EmpresaRequest.Direccion" type="text" class="form-control" role="textbox" placeholder="Dirección" required>
+                                        <input name="Direccion" asp-for="EmpresaRequest.Direccion" type="text" class="form-control" role="textbox" placeholder="Dirección" required>
                                     </div>
                                     <span class="text-danger" asp-validation-for="EmpresaRequest.Telefono"></span>
                                     <div class="form-group d-flex justify-content-center">
-                                        <input asp-for="EmpresaRequest.Telefono" type="text" class="form-control" role="textbox" placeholder="Telefono" required>
+                                        <input name="Telefono" asp-for="EmpresaRequest.Telefono" type="text" class="form-control" role="textbox" placeholder="Telefono" required>
                                     </div>
                                     <span class="text-danger" asp-validation-for="EmpresaRequest.Correo"></span>
                                     <div class="form-group d-flex justify-content-center">
-                                        <input asp-for="EmpresaRequest.Correo" type="email" class="form-control" role="textbox" placeholder="Correo" required>
+                                        <input id="Usuario" name="Correo" asp-for="EmpresaRequest.Correo" type="email" class="form-control" role="textbox" placeholder="Correo" required>
                                     </div>
                                     <span class="text-danger" asp-validation-for="CuentaRequest.Contrasenia"></span>
                                     <div class="form-group d-flex justify-content-center">
-                                        <input asp-for="CuentaRequest.Contrasenia" type="password" class="form-control" role="textbox" placeholder="Contraseña" required>
+                                        <input name="Contrasenia" asp-for="CuentaRequest.Contrasenia" type="password" class="form-control" role="textbox" placeholder="Contraseña" required>
                                     </div>
                                     <br />
                                     <div class="d-flex justify-content-center">
@@ -62,56 +62,36 @@
     </div>
 
     @section Scripts{
-        @*<script>
-                const url = "https://localhost:44321/api/empresa/"
-                var formulario = document.getElementById('CrearCuenta')
+        <script>
+            const url = "https://localhost:44321/api/empresa/";
+            const url2 = "https://localhost:44321/api/cuenta/";
+            const $formulario = document.querySelector('#Cuenta')
+            
 
-                const url = "https://localhost:44321/api/empresa"
-                const $formulario = document.querySelector('#crearCuenta')
+            $formulario.addEventListener('submit', (e) => {
+                e.preventDefault();
+                var usuario = document.getElementById('Usuario').value;
+                const dt = new FormData($formulario);
+                dt.set('Usuario', usuario)
+                console.log(dt.set('Usuario', usuario))
 
-                const $label = document.querySelector('#mensaje')
-                function displayMessage(message) {
-                    if (message)
-                        $label.textContent = "."
-                    else
-                        $label.textContent = "Ha ocurrido un problema."
-                }
-                $formulario.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    console.log('lmao')
-
-
-                    const dt = new FormData($formulario);
-
-                    //Mantener esto solo para pruebas
-                    console.log(dt.get('nombre'))
-                    console.log(dt.get('nombrerepresentante'))
-                    console.log(dt.get('direccion'))
-                    console.log(dt.get('telefono'))
-                    console.log(dt.get('correo'))
-                    console.log(dt.get('contrasenia'))
-
-
-                    //fetch
-                    fetch(url, {
-                        method: 'POST',
-                        body: dt
-
-                    })
-                        .then(res => res.json())
-                        .then(data => {
-                            console.log(dt)
+                fetch(url, {
+                    method: 'POST',
+                    body: dt,
+                }).then(function (result) {
+                    if (result.ok) {
+                        fetch(url2, {
+                            method: 'POST',
+                            body: dt,
+                            
+                        }).then(function (result) {
+                            if (result.ok) {
+                                location.href = '/Inicio';
+                            }
                         })
-
-                        body: dt,
-
-                    })
-                        .then(res => res.json())
-                        .then(window.location.href = 'https://localhost:44348/Inicio')
-                        .catch(error => console.error('Error:', error))
-                        .then(response => displayMessage(response));
-                    //queda pendiente usar correo y contraseña para darselos tambien a cuenta
+                    }
                 })
-            </script>*@
+            })
+        </script>
     }
 </body>
